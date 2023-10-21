@@ -1,31 +1,57 @@
-// App.js
 import React from "react";
-// import {
-//   BrowserRouter as Router,
-//   Route,
-//   Switch,
-//   Redirect,
-// } from "react-router-dom";
-// import HomePage from "./pages/HomePage";
-// import CatalogPage from "./pages/CatalogPage";
-// import FavoritesPage from "./pages/FavoritesPage";
+import { HomePage } from "./components/pages/HomePage";
+import {
+  BrowserRouter as Router,
+  Route,
+  Navigate,
+  Outlet,
+} from "react-router-dom";
+
 import { Sidebar } from "./components/Sidebar";
 
 export const App = () => {
   return (
     <>
       <Sidebar />
-      {/* <Router>
-        <Switch>
-          <Route exact path="/" component={HomePage} />
-          <Route exact path="/catalog" component={CatalogPage} />
-          <Route exact path="/favorites" component={FavoritesPage} />
-          <Redirect to="/" />
-        </Switch>
-      </Router> */}
+      <HomePage />
+      <Router>
+        <Outlet>
+          <Route path="/" element={<HomePage />} />
+          <Navigate to="/" />
+        </Outlet>
+      </Router>
     </>
   );
 };
+
+// import React from "react";
+// import { HomePage } from "./components/pages/HomePage";
+// import {
+//   BrowserRouter as Router,
+//   Route,
+//   Switch,
+//   Redirect,
+// } from "react-router-dom";
+// // import HomePage from "./pages/HomePage";
+// // import CatalogPage from "./pages/CatalogPage";
+// // import FavoritesPage from "./pages/FavoritesPage";
+// import { Sidebar } from "./components/Sidebar";
+
+// export const App = () => {
+//   return (
+//     <>
+//       <Sidebar />
+//       <Router>
+//         <Switch>
+//           <Route exact path="/" component={HomePage} />
+//           {/* <Route exact path="/catalog" component={CatalogPage} />
+//           <Route exact path="/favorites" component={FavoritesPage} /> */}
+//           <Redirect to="/" />
+//         </Switch>
+//       </Router>
+//     </>
+//   );
+// };
 
 // import logo from "./logo.svg";
 // import "./App.css";
