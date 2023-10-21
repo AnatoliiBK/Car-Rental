@@ -1,15 +1,13 @@
 import React from "react";
-import { Button } from "../Button";
-import { HeroCar } from "../images/HeroCar";
-import lamborghiniAventador from "../images/lamborghini_aventador.jpg";
+// import { Button } from "../Button";
+// import { HeroCar } from "../images/HeroCar";
+// import lamborghiniAventador from "../images/lamborghini_aventador.jpg";
+import { Section } from "../sections/Section";
 
 export const HomePage = () => {
     return (
-        <div className="backgroundImage">
-            {/* <img src={lamborghiniAventador} alt="lamborghini_aventador"/> */}
-            <h1 className="heroTitle"> Do you want an incredible experience? Choose a car for yourself! Every single one of them is great!</h1>
-            <Button />
-        </div>
+       <Section />
+        
     );
 };
 
