@@ -23,8 +23,6 @@ code {
 }
 
 .heroTitle {
-  /* color: azure; */
-  /* background: linear-gradient(to right, #84d4f9, #e9bd6c); */
   background: linear-gradient(to right, #FFA500 0%, #FFFF 50%, #FFA500 100%);
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -33,7 +31,6 @@ code {
   margin-right: 0;
   margin-bottom: 39px;
   margin-left: 0;
-
 }
 
 .heroTitle:hover::before {
@@ -79,14 +76,25 @@ code {
   font-weight: 600;
   cursor: pointer;
   /* animation: colorChange 2s linear infinite; */
-  animation: colorChange 2s linear infinite, running-border 2s infinite;
-  border-bottom: 1px solid gold;
+  animation: colorChange 2s linear infinite, running-text 2s infinite;
+  transition: color 2s;
+  /* border-bottom: 1px solid gold; */
   /* animation: running-border 2s infinite; */
 }
 
-@keyframes running-border {
-  from { border-bottom-color: transparent; } to { border-bottom-color: gold; }
+@keyframes running-text {
+  0% { color: transparent; }
+  50% { color: gold; }
+  100% { color: transparent; }
 }
+
+/* @keyframes running-text {
+  from { color: transparent; } to { color: gold; }
+} */
+
+/* @keyframes running-border {
+  from { border-bottom-color: transparent; } to { border-bottom-color: gold; }
+} */
 
 @keyframes colorChange {
   50% {
