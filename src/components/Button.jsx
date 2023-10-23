@@ -1,7 +1,7 @@
 import React from "react";
 
-export const Button = () => {
+export const Button = ({text}) => {
     return (
-        <button className="button">Cars Here</button>
+        <button className="button">{text}</button>
     )
 }
