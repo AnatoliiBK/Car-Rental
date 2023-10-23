@@ -5,10 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: url(../src/components/images/lamborghini_aventador.jpg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  
 }
 
 code {
@@ -16,21 +13,36 @@ code {
     monospace;
 }
 
+.homePage {
+  background-image: url(../src/components/images/lamborghini_aventador.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+}
+
 .heroTitle {
   /* color: azure; */
   /* background: linear-gradient(to right, #84d4f9, #e9bd6c); */
-  background: linear-gradient(to right, #FFA500 0%, #333333 50%, #FFA500 100%);
+  background: linear-gradient(to right, #FFA500 0%, #FFFF 50%, #FFA500 100%);
   background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: 30px;
-  margin: 0;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 39px;
+  margin-left: 0;
+
 }
 
 .heroTitle:hover::before {
   content: "Хочете неймовірних вражень? Обирайте автомобіль для себе! Кожен з них чудовий!";
 }
 
-
+.heroTitle:hover {
+  margin-bottom: 0;
+}
 
 .label {
   color: aquamarine;
@@ -48,20 +60,9 @@ code {
   padding: 30px 20px;
 }
 
-/* .button {
-  margin-top: 20px;
-  padding: 15px 20px;
-  background-color: blue;
-  color: blanchedalmond;
-  font-size: 20px;
-  border: none;
-  border-radius: 4px;
-  font-size: x-large;
-  cursor: pointer;
-} */
 
 .button {
-  margin-top: 20px;
+  /* margin-top: 20px; */
   /* padding: 15px 40px; */
   padding-top: 15px;
   padding-bottom: 15px;
@@ -77,19 +78,17 @@ code {
   font-size: 30px;
   font-weight: 600;
   cursor: pointer;
-  /* animation: blinker 2s linear infinite; */
-  animation: colorChange 2s linear infinite;
+  /* animation: colorChange 2s linear infinite; */
+  animation: colorChange 2s linear infinite, running-border 2s infinite;
+  border-bottom: 1px solid gold;
+  /* animation: running-border 2s infinite; */
 }
 
-/* @keyframes blinker {
-  50% {
-    color: gold;
-  }
-} */
+@keyframes running-border {
+  from { border-bottom-color: transparent; } to { border-bottom-color: gold; }
+}
+
 @keyframes colorChange {
-  /* 0% {
-    color: black;
-  } */
   50% {
     color: gold;
   }

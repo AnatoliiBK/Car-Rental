@@ -1,17 +1,17 @@
-import React from "react";
+// import React from "react";
 
 export const HeroCar = () => {
-    const backgroundImageUrl = "./lamborghini_aventador.jpg"; // замініть це на власний URL
+    // const backgroundImageUrl = "./lamborghini_aventador.jpg"; // замініть це на власний URL
 
-    const divStyle = {
-        backgroundImage: `url(${backgroundImageUrl})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        width: '100%',
-        height: '100%',
-    };
+    // const divStyle = {
+    //     backgroundImage: `url(${backgroundImageUrl})`,
+    //     backgroundSize: 'cover',
+    //     backgroundPosition: 'center',
+    //     width: '100%',
+    //     height: '100%',
+    // };
 
-    return <div style={divStyle}></div>;
+    // return <div style={divStyle}></div>;
 };
 
 
