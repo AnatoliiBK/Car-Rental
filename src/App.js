@@ -1,10 +1,12 @@
 import React from "react";
-import { HomePage } from "./components/pages/HomePage";
+import HomePage from "./components/pages/HomePage";
+import CatalogPage from "./components/pages/CatalogPage";
 import {
   BrowserRouter as Router,
   Route,
-  Navigate,
-  Outlet,
+  // Navigate,
+  // Outlet,
+  Routes,
 } from "react-router-dom";
 
 // import { Sidebar } from "./components/Sidebar";
@@ -13,12 +15,15 @@ export const App = () => {
   return (
     <>
       {/* <Sidebar /> */}
-      <HomePage />
+      {/* <HomePage /> */}
       <Router>
-        <Outlet>
+        {/* <Outlet> */}
+        <Routes>
           <Route path="/" element={<HomePage />} />
-          <Navigate to="/" />
-        </Outlet>
+          <Route path="/catalog" element={<CatalogPage />} />
+          {/* <Navigate to="/" /> */}
+        </Routes>
+        {/* </Outlet> */}
       </Router>
     </>
   );

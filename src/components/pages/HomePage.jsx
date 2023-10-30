@@ -2,7 +2,7 @@ import React from "react";
 import { Button } from "../Button";
 import { Section } from "../sections/Section";
 import { HeroTitle } from "../HeroTitle";
-export const HomePage = () => {
+const HomePage = () => {
     return (
         <div className="homePage">
             <Section>
@@ -17,3 +17,5 @@ export const HomePage = () => {
         
     );
 };
+
+export default HomePage;
