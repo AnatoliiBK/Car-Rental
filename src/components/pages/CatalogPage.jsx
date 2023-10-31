@@ -8,7 +8,7 @@ const CatalogPage = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('https://652ed5ac0b8d8ddac0b1f589.mockapi.io/:catalog');
+        const response = await axios.get('https://652ed5ac0b8d8ddac0b1f589.mockapi.io/adverts');
         setCars(response.data);
       } catch (error) {
         console.error('Error fetching data', error);
