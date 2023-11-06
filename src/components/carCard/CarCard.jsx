@@ -1,4 +1,5 @@
 import React from 'react';
+import { nanoid } from 'nanoid';
 
 export const CarCard = ({ car }) => {
   return (
@@ -14,14 +15,14 @@ export const CarCard = ({ car }) => {
       <p>Mileage: {car.mileage}</p>
       <h3>Accessories:</h3>
       <ul>
-        {car.accessories.map((item, index) => (
-          <li key={index}>{item}</li>
+        {car.accessories.map((item) => (
+          <li key={nanoid()}>{item}</li>
         ))}
       </ul>
       <h3>Functionalities:</h3>
       <ul>
-        {car.functionalities.map((item, index) => (
-          <li key={index}>{item}</li>
+        {car.functionalities.map((item) => (
+          <li key={nanoid()}>{item}</li>
         ))}
       </ul>
       <p>Rental Conditions: {car.rentalConditions}</p>
