@@ -23,8 +23,8 @@ const CatalogPage = () => {
 
   return (
     <div className="catalog-page">
-      {cars.map((car) => (
-        <CarCard key={car.id} car={car} />
+      {cars.map((car, index) => (
+        <CarCard key={`${car.id}-${index}`} car={car} />
       ))}
     </div>
   );
