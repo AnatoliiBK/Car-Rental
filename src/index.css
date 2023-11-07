@@ -116,3 +116,12 @@ code {
   content: " Here, Take It For Yourself !";
 }
 
+.car-card {
+  width: 274px;
+  /* height: 354px; */
+}
+
+.car-img {
+  width: 274px;
+  height: 268px;
+}

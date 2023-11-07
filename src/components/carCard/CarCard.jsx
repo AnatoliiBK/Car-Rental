@@ -4,7 +4,7 @@ import React from 'react';
 export const CarCard = ({ car }) => {
   return (
     <div className="car-card">
-      <img src={car.img} alt={`${car.make} ${car.model}`} />
+      <img className="car-img" src={car.img} alt={`${car.make} ${car.model}`} width={274} height={268}/>
       <h2>{`${car.year} ${car.make} ${car.model}`}</h2>
       <p>{car.description}</p>
       <p>Fuel Consumption: {car.fuelConsumption}</p>
