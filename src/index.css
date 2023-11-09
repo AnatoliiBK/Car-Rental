@@ -118,10 +118,46 @@ code {
 
 .car-card {
   width: 274px;
+  position: relative;
+  overflow: hidden;
   /* height: 354px; */
 }
 
 .car-img {
-  width: 274px;
+  object-fit: cover; /* Масштабування зображення зберігаючи його пропорції */
+  object-position: center; /* Вирівнювання зображення по центру контейнера */
+  width: 100%; /* Ширина зображення */
+  transition: transform 250ms ease-in-out, box-shadow 250ms ease-in-out;
+  cursor: pointer;  
   height: 268px;
+
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0 1px 10px black;
+  }
 }
+
+.descr {
+  display: none;
+}
+
+/* .more {
+  font-size: smaller;
+  color: blue;
+  animation: colorChange 2s linear infinite;
+  position: absolute;
+  top: 220px;
+  right: 10px;
+} */
+
+/* .see-more {
+  border: none;
+  font-size: 20px;
+  background: rgba(0, 0, 0, 0);
+  color: blue;
+  animation: colorChange 2s linear infinite;
+  position: absolute;
+  top: 220px;
+  right: 10px;
+  
+} */
