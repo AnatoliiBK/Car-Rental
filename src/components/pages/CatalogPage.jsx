@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { CarCard } from '../carCard/CarCard';
+// import { CarCard } from '../carCard/CarCard';
 import { CarData } from '../carCard/CarData';
 
 const CatalogPage = () => {
