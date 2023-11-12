@@ -13,7 +13,9 @@ const HomePage = () => {
                 <NavLink to='/catalog'>
                     <Button text='All Cars' />
                 </NavLink>
-                <Button text='Sporting Cars' />
+                <NavLink to='/sporting'>
+                    <Button text='Sporting Cars' />
+                </NavLink>
                 <Button text='SUV Cars' />
                 <Button text='All Road Cars' />
             </Section>

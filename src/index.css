@@ -173,3 +173,18 @@ code {
   grid-gap: 10px;
   grid-template-columns: 1fr 1fr 1fr 1fr;
 }
+
+.car-type {
+  background: linear-gradient(to right, #FFA500 0%, #111 50%, #ff0000 100%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 30px;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 39px;
+  margin-left: 0;
+}
+
+.car-type:hover::after {
+  content: ": They are fast and powerful!";
+}
