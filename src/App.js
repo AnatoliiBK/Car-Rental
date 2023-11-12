@@ -18,7 +18,7 @@ export const App = () => {
   return (
     <>
       {/* <Sidebar /> */}
-      {/* <HomePage /> */}
+
       <Router>
         {/* <Outlet> */}
         <Routes>
