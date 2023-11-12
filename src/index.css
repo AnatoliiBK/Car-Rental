@@ -57,6 +57,7 @@ code {
 }
 
 .section-catalog {
+  min-height: 100vh;
   padding: 30px 20px;
   width: 100%;
   height: 100%;
