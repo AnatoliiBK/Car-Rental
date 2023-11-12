@@ -208,3 +208,33 @@ code {
 .all:hover::after {
   content: ": They're all great!";
 }
+
+.suv {
+  background: linear-gradient(to right, #2f2b25 0%, #111 50%, #ff0000 100%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 30px;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 39px;
+  margin-left: 0;
+}
+
+.suv:hover::after {
+  content: ": Fast, all-terrain, roomy!";
+}
+
+.all-road {
+  background: linear-gradient(to right, #2f2b25 0%, #111 50%, #ff0000 100%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 30px;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 39px;
+  margin-left: 0;
+}
+
+.all-road:hover::after {
+  content: ": They have power and extraordinary cross-country ability!";
+}

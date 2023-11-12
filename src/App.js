@@ -9,6 +9,8 @@ import {
   Routes,
 } from "react-router-dom";
 import SportingCars from "./components/pages/SportingCars";
+import SuvCars from "./components/pages/SuvCars";
+import AllRoadCars from "./components/pages/AllRoadCars";
 
 // import { Sidebar } from "./components/Sidebar";
 
@@ -23,6 +25,8 @@ export const App = () => {
           <Route path="/" element={<HomePage />} />
           <Route path="/catalog" element={<CatalogPage />} />
           <Route path="/sporting" element={<SportingCars />} />
+          <Route path="/suv" element={<SuvCars />} />
+          <Route path="/all road" element={<AllRoadCars />} />
         </Routes>
         {/* </Outlet> */}
       </Router>

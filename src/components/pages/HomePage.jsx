@@ -16,8 +16,12 @@ const HomePage = () => {
                 <NavLink to='/sporting'>
                     <Button text='Sporting Cars' />
                 </NavLink>
-                <Button text='SUV Cars' />
-                <Button text='All Road Cars' />
+                <NavLink to='/suv'>
+                    <Button text='SUV Cars' />
+                </NavLink>
+                <NavLink to='/all road'>
+                    <Button text='All Road Cars' />
+                </NavLink>
             </Section>
         </div>
         
