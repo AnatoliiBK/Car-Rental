@@ -179,7 +179,7 @@ code {
   grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
-.car-type {
+.sport {
   background: linear-gradient(to right, #2f2b25 0%, #111 50%, #ff0000 100%);
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -190,11 +190,11 @@ code {
   margin-left: 0;
 }
 
-.car-type:hover::after {
+.sport:hover::after {
   content: ": They are fast and powerful!";
 }
 
-.car-typeAll {
+.all {
   background: linear-gradient(to right, #2f2b25 0%, #111 50%, #ff0000 100%);
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -205,6 +205,6 @@ code {
   margin-left: 0;
 }
 
-.car-typeAll:hover::after {
+.all:hover::after {
   content: ": They're all great!";
 }

@@ -27,7 +27,7 @@ const SportingCars = () => {
 
   return (
     <SectionCatalog>
-      <h1 className='car-type'>Sporting Cars</h1>
+      <h1 className='sport'>Sporting Cars</h1>
       <div className="catalog-page">
       
       {sportingCars.map(car => (
