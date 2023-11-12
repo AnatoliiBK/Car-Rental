@@ -25,6 +25,7 @@ const CatalogPage = () => {
 
   return (
     <SectionCatalog>
+      <h1 className='car-typeAll'>All Cars</h1>
       <div className="catalog-page">
       {cars.map((car, index) => (
         <CarData key={`${car.id}-${index}`} car={car} />

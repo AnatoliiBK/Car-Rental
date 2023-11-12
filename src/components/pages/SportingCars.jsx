@@ -22,7 +22,7 @@ const SportingCars = () => {
     fetchData();
   }, []);
 
- 
+  // Фільтруємо список автомобілів, залишаючи тільки ті, які мають значення "SPORTING" у полі type
   const sportingCars = cars.filter(car => car.type.includes('SPORTING'));
 
   return (
