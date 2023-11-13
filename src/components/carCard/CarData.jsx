@@ -1,6 +1,7 @@
 import React from 'react';
 // import { nanoid } from 'nanoid';
 // import { SeeMore } from './SeeMore';
+import { ButtonModal } from '../ButtonModal';
 
 export const CarData = ({ car }) => {
     const companyAddress = car.address.split(',');
@@ -8,7 +9,9 @@ export const CarData = ({ car }) => {
     const country = companyAddress[2];
     return (
     <div className="car-card">
-      <img className="car-img" src={car.img} alt={`${car.make} ${car.model}`} />
+      <ButtonModal>
+        <img className="car-img" src={car.img} alt={`${car.make} ${car.model}`} />
+      </ButtonModal>
       <h2>{`${car.make} ${car.model}`}</h2>
       {/* <SeeMore text='See more' /> */}
       <div className='descr'>

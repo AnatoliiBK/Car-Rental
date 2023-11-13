@@ -62,10 +62,7 @@ code {
   width: 100%;
   height: 100%;
   background: linear-gradient(to right, #fffc00, blue);
-  /* background: linear-gradient(to right, #f2f2f2, #dbdbdb); */
-  /* background: conic-gradient(white, black); */
-  /* background: conic-gradient(from 10deg at 20% 30%, white, black); */
-  /* background: linear-gradient(-45deg, blue -30%, transparent 80%), linear-gradient(45deg, darkred 20%, crimson, darkorange 60%, gold, bisque); */
+  
 }
 
 .sidebar {
@@ -142,6 +139,7 @@ code {
   transition: transform 250ms ease-in-out, box-shadow 250ms ease-in-out;
   cursor: pointer;  
   height: 268px;
+  vertical-align: middle;
 
   &:hover {
     transform: scale(1.05);
@@ -239,3 +237,27 @@ code {
 .all-road:hover::after {
   content: ": They have power and extraordinary cross-country ability!";
 }
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.btn-img {
+  padding: 0;
+  border: none;
+}
+
