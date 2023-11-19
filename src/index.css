@@ -283,6 +283,12 @@ code {
   font-weight: bold;
   border: none;
   cursor: pointer;
+  transition: transform 250ms ease-in-out, box-shadow 250ms ease-in-out;
+
+  &:hover {
+    transform: scale(1.15);
+    box-shadow: 0 1px 10px black;
+  }
 }
 
 .btn-take {
@@ -292,6 +298,12 @@ code {
   font-weight: bold;
   border: none;
   cursor: pointer;
+  transition: transform 250ms ease-in-out, box-shadow 250ms ease-in-out;
+
+  &:hover {
+    transform: scale(1.15);
+    box-shadow: 0 1px 10px black;
+  }
 }
 
 .edge {

@@ -33,7 +33,7 @@ export const ButtonModal = ({ children, carId }) => {
   }, []);
 
   const selectedCar = useMemo(() => {
-    return cars.find(car => car.id === carId);
+    return cars.find(car => carId === car.id);
   }, [cars, carId]);
 
     return (
