@@ -50,7 +50,9 @@ export const ButtonModal = ({ children, carId }) => {
       
            <div className="edge">
             <button className="btn-leave" onClick={closeModal}>LEAVE THIS</button>
-            <button className="btn-take" onClick={closeModal}>TAKE THIS</button>
+            {/* <button className="btn-take" onClick={closeModal}>TAKE THIS</button> */}
+            <button className="btn-take" onClick={() => window.location.href = 'tel:+380995555555'}>TAKE THIS</button>
+
            </div>
           </div>
         </div>
