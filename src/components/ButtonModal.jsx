@@ -48,7 +48,10 @@ export const ButtonModal = ({ children, carId }) => {
           )}
         
       
-            <button onClick={closeModal}>LEAVE THIS</button>
+           <div className="edge">
+            <button className="btn-leave" onClick={closeModal}>LEAVE THIS</button>
+            <button className="btn-take" onClick={closeModal}>TAKE THIS</button>
+           </div>
           </div>
         </div>
       )}

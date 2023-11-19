@@ -1,7 +1,7 @@
 import React from 'react';
 import { ButtonModal } from '../ButtonModal';
 
-export const CarData = ({ car, carId }) => {
+export const CarData = ({ car }) => {
     const companyAddress = car.address.split(',');
     const city = companyAddress[1];
     const country = companyAddress[2];

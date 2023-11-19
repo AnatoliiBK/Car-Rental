@@ -276,3 +276,25 @@ code {
   border: none;
 }
 
+.btn-leave {
+  background: linear-gradient(to right, blue 0%, #63666A 50%, blue 100%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-take {
+  background: linear-gradient(to right, blue 0%, #FFFF 50%, #FFA500 100%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+
+.edge {
+  display: flex;
+  justify-content: space-between;
+}
