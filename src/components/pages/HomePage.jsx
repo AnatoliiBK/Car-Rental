@@ -2,7 +2,7 @@ import React from "react";
 import { Button } from "../Button";
 import { Section } from "../sections/Section";
 import { HeroTitle } from "../HeroTitle";
-import { NavLink } from "react-router-dom"; // імпортувати компонент Link
+import { NavLink } from "react-router-dom";
 
 const HomePage = () => {
     return (

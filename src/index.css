@@ -310,3 +310,24 @@ code {
   display: flex;
   justify-content: space-between;
 }
+
+
+.button-th {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 40px;
+  padding-right: 300px;
+  background: rgba(0, 0, 0, 0);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 30px;
+  font-weight: 600;
+  cursor: pointer;
+  animation: colorChange 2s linear infinite;
+}
+
+.dark-theme {
+  background-color: #222;
+  color: #fff;
+}
