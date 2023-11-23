@@ -1,5 +1,5 @@
-const themeToggleBtn = document.getElementById("themeToggleBtn");
-// const body = document.body;
+const themeToggleBtn = document.querySelector(".themeToggleBtn");
+// const theme = document.body;
 const theme = document.querySelector(".section-catalog");
 
 function toggleTheme() {

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import HomePage from "./components/pages/HomePage";
 import CatalogPage from "./components/pages/CatalogPage";
 import {
@@ -11,16 +11,19 @@ import {
 import SportingCars from "./components/pages/SportingCars";
 import SuvCars from "./components/pages/SuvCars";
 import AllRoadCars from "./components/pages/AllRoadCars";
+import ButtonTheme from "./components/ButtonTheme";
 
 // import { Sidebar } from "./components/Sidebar";
 
 export const App = () => {
+  const [isDarkTheme, setIsDarkTheme] = useState(false);
   return (
-    <>
+    <div
+      className={`page ${isDarkTheme ? "page-dark-theme" : "page-light-theme"}`}
+    >
       {/* <Sidebar /> */}
-
+      <ButtonTheme setIsDarkTheme={setIsDarkTheme} isDarkTheme={isDarkTheme} />
       <Router>
-        {/* <Outlet> */}
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/catalog" element={<CatalogPage />} />
@@ -28,9 +31,8 @@ export const App = () => {
           <Route path="/suv" element={<SuvCars />} />
           <Route path="/all road" element={<AllRoadCars />} />
         </Routes>
-        {/* </Outlet> */}
       </Router>
-    </>
+    </div>
   );
 };
 
