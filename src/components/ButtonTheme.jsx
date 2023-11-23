@@ -22,7 +22,7 @@ const ButtonTheme = ({ setIsDarkTheme, isDarkTheme }) => {
       className={`button-theme ${isDarkTheme ? 'dark-theme' : 'light-theme'}`}
       onClick={toggleTheme}
     >
-      {isDarkTheme ? 'Switch to Light Theme' : 'Switch to Dark Theme'}
+      {isDarkTheme ? 'Light Background Style' : 'Dark Background Style'}
     </button>
   );
 };

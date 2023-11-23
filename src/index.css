@@ -327,8 +327,19 @@ code {
   animation: colorChange 2s linear infinite;
 }
 
+.light-theme {
+  /* background-color: #fff; */
+  /* background: linear-gradient(to right, #fffc00, blue); */
+  /* color: #000; */
+  /* color: #f8f8f8; */
+  background: linear-gradient(to right, blue 0%, #fffc00 100%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .dark-theme {
-  background-color: #222;
+  /* background-color: #222; */
+  background: linear-gradient(to right, #fffc00, blue);
   color: #fff;
 }
 
