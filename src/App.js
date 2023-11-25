@@ -18,9 +18,7 @@ import ButtonTheme from "./components/ButtonTheme";
 export const App = () => {
   const [isDarkTheme, setIsDarkTheme] = useState(false);
   return (
-    <div
-      className={`page ${isDarkTheme ? "page-dark-theme" : "page-light-theme"}`}
-    >
+    <div className={`${isDarkTheme ? "page-dark-theme" : "page-light-theme"}`}>
       {/* <Sidebar /> */}
       <ButtonTheme setIsDarkTheme={setIsDarkTheme} isDarkTheme={isDarkTheme} />
       <Router>

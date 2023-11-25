@@ -179,7 +179,7 @@ code {
 }
 
 .sport {
-  background: linear-gradient(to right, #2f2b25 0%, #111 50%, #ff0000 100%);
+  background: linear-gradient(to right, blue 0%, #FFA500 50%, #ff0000 100%);
   background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: 30px;
@@ -187,6 +187,7 @@ code {
   margin-right: 0;
   margin-bottom: 39px;
   margin-left: 0;
+  display: inline-block;
 }
 
 .sport:hover::after {
@@ -194,7 +195,8 @@ code {
 }
 
 .all {
-  background: linear-gradient(to right, #2f2b25 0%, #111 50%, #ff0000 100%);
+  /* background: linear-gradient(to right, #2f2b25 0%, #111 50%, #ff0000 100%); */
+  background: linear-gradient(to right, blue 0%, #FFA500 50%, #ff0000 100%);
   background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: 30px;
@@ -202,6 +204,7 @@ code {
   margin-right: 0;
   margin-bottom: 39px;
   margin-left: 0;
+  display: inline-block;
 }
 
 .all:hover::after {
@@ -209,7 +212,8 @@ code {
 }
 
 .suv {
-  background: linear-gradient(to right, #2f2b25 0%, #111 50%, #ff0000 100%);
+  /* background: linear-gradient(to right, #2f2b25 0%, #111 50%, #ff0000 100%); */
+  background: linear-gradient(to right, blue 0%, #FFA500 50%, #ff0000 100%);
   background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: 30px;
@@ -217,6 +221,7 @@ code {
   margin-right: 0;
   margin-bottom: 39px;
   margin-left: 0;
+  display: inline-block;
 }
 
 .suv:hover::after {
@@ -224,7 +229,8 @@ code {
 }
 
 .all-road {
-  background: linear-gradient(to right, #2f2b25 0%, #111 50%, #ff0000 100%);
+  /* background: linear-gradient(to right, #2f2b25 0%, #111 50%, #ff0000 100%); */
+  background: linear-gradient(to right, blue 0%, #FFA500 50%, #ff0000 100%);
   background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: 30px;
@@ -232,6 +238,7 @@ code {
   margin-right: 0;
   margin-bottom: 39px;
   margin-left: 0;
+  display: inline-block;
 }
 
 .all-road:hover::after {
@@ -328,13 +335,13 @@ code {
 }
 
 .light-theme {
-  /* background-color: #fff; */
-  /* background: linear-gradient(to right, #fffc00, blue); */
-  /* color: #000; */
-  /* color: #f8f8f8; */
+  color: #f8f8f8;
   background: linear-gradient(to right, blue 0%, #fffc00 100%);
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+ 
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0 1px 10px black;
+  }
 }
 
 .dark-theme {
@@ -342,6 +349,10 @@ code {
   background: linear-gradient(to right, #fffc00, blue);
   color: #fff;
   
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0 1px 10px black;
+  }
 }
 
 .page-dark-theme {
