@@ -23,7 +23,15 @@ export const App = () => {
       <ButtonTheme setIsDarkTheme={setIsDarkTheme} isDarkTheme={isDarkTheme} />
       <Router>
         <Routes>
-          <Route path="/" element={<HomePage />} />
+          <Route
+            path="/"
+            element={
+              <HomePage
+                setIsDarkTheme={setIsDarkTheme}
+                isDarkTheme={isDarkTheme}
+              />
+            }
+          />
           <Route path="/catalog" element={<CatalogPage />} />
           <Route path="/sporting" element={<SportingCars />} />
           <Route path="/suv" element={<SuvCars />} />
