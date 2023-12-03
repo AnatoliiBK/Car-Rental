@@ -6,7 +6,7 @@ import { NavLink } from "react-router-dom";
 
 const HomePage = ({ isDarkTheme }) => {
     // const homePageClasses = isDarkTheme ? "homePageDark" : "homePage";
-    const homePageClasses = `homePage ${isDarkTheme ? "homePageDark" : ""}`;
+    const homePageClasses = `${isDarkTheme ? "homePageDark" : "homePage"}`;
     return (
         <div className={homePageClasses}>
             <Section>
