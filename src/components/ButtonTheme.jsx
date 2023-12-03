@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 
 
 const ButtonTheme = ({ setIsDarkTheme, isDarkTheme }) => {
@@ -6,16 +6,16 @@ const ButtonTheme = ({ setIsDarkTheme, isDarkTheme }) => {
     setIsDarkTheme(prevTheme => !prevTheme);
   };
 
-  useEffect(() => {
-    localStorage.setItem('darkTheme', JSON.stringify(isDarkTheme));
-  }, [isDarkTheme]);
+  // useEffect(() => {
+  //   localStorage.setItem('darkTheme', JSON.stringify(isDarkTheme));
+  // }, [isDarkTheme]);
 
-  useEffect(() => {
-    const savedTheme = JSON.parse(localStorage.getItem('darkTheme'));
-    if (savedTheme !== null) {
-      setIsDarkTheme(savedTheme);
-    }
-  }, [setIsDarkTheme]);
+  // useEffect(() => {
+  //   const savedTheme = JSON.parse(localStorage.getItem('darkTheme'));
+  //   if (savedTheme !== null) {
+  //     setIsDarkTheme(savedTheme);
+  //   }
+  // }, [setIsDarkTheme]);
 
   return (
     <button

@@ -1,25 +1,28 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import HomePage from "./components/pages/HomePage";
 import CatalogPage from "./components/pages/CatalogPage";
-import {
-  BrowserRouter as Router,
-  Route,
-  // Navigate,
-  // Outlet,
-  Routes,
-} from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import SportingCars from "./components/pages/SportingCars";
 import SuvCars from "./components/pages/SuvCars";
 import AllRoadCars from "./components/pages/AllRoadCars";
 import ButtonTheme from "./components/ButtonTheme";
 
-// import { Sidebar } from "./components/Sidebar";
-
 export const App = () => {
-  const [isDarkTheme, setIsDarkTheme] = useState(false);
+  // Використовуйте функцію для отримання початкового значення
+  const getInitialTheme = () => {
+    const savedTheme = JSON.parse(localStorage.getItem("darkTheme"));
+    return savedTheme !== null ? savedTheme : false;
+  };
+
+  const [isDarkTheme, setIsDarkTheme] = useState(getInitialTheme);
+
+  // Зберігайте тему в localStorage при її зміні
+  useEffect(() => {
+    localStorage.setItem("darkTheme", JSON.stringify(isDarkTheme));
+  }, [isDarkTheme]);
+
   return (
     <div className={`${isDarkTheme ? "page-dark-theme" : "page-light-theme"}`}>
-      {/* <Sidebar /> */}
       <ButtonTheme setIsDarkTheme={setIsDarkTheme} isDarkTheme={isDarkTheme} />
       <Router>
         <Routes>
@@ -41,6 +44,50 @@ export const App = () => {
     </div>
   );
 };
+
+// import React, { useState } from "react";
+// import HomePage from "./components/pages/HomePage";
+// import CatalogPage from "./components/pages/CatalogPage";
+// import {
+//   BrowserRouter as Router,
+//   Route,
+//   // Navigate,
+//   // Outlet,
+//   Routes,
+// } from "react-router-dom";
+// import SportingCars from "./components/pages/SportingCars";
+// import SuvCars from "./components/pages/SuvCars";
+// import AllRoadCars from "./components/pages/AllRoadCars";
+// import ButtonTheme from "./components/ButtonTheme";
+
+// // import { Sidebar } from "./components/Sidebar";
+
+// export const App = () => {
+//   const [isDarkTheme, setIsDarkTheme] = useState(false);
+//   return (
+//     <div className={`${isDarkTheme ? "page-dark-theme" : "page-light-theme"}`}>
+//       {/* <Sidebar /> */}
+//       <ButtonTheme setIsDarkTheme={setIsDarkTheme} isDarkTheme={isDarkTheme} />
+//       <Router>
+//         <Routes>
+//           <Route
+//             path="/"
+//             element={
+//               <HomePage
+//                 setIsDarkTheme={setIsDarkTheme}
+//                 isDarkTheme={isDarkTheme}
+//               />
+//             }
+//           />
+//           <Route path="/catalog" element={<CatalogPage />} />
+//           <Route path="/sporting" element={<SportingCars />} />
+//           <Route path="/suv" element={<SuvCars />} />
+//           <Route path="/all road" element={<AllRoadCars />} />
+//         </Routes>
+//       </Router>
+//     </div>
+//   );
+// };
 
 // import React from "react";
 // import { HomePage } from "./components/pages/HomePage";
