@@ -8,7 +8,7 @@ import AllRoadCars from "./components/pages/AllRoadCars";
 import ButtonTheme from "./components/ButtonTheme";
 
 export const App = () => {
-  // Використовуйте функцію для отримання початкового значення
+  // Початкове значення теми
   const getInitialTheme = () => {
     const savedTheme = JSON.parse(localStorage.getItem("darkTheme"));
     return savedTheme !== null ? savedTheme : false;
@@ -16,7 +16,7 @@ export const App = () => {
 
   const [isDarkTheme, setIsDarkTheme] = useState(getInitialTheme);
 
-  // Зберігайте тему в localStorage при її зміні
+  // Збереження темної теми в localStorage при її виборі
   useEffect(() => {
     localStorage.setItem("darkTheme", JSON.stringify(isDarkTheme));
   }, [isDarkTheme]);
