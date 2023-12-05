@@ -16,10 +16,11 @@ const ButtonTheme = ({ setIsDarkTheme, isDarkTheme }) => {
   //     setIsDarkTheme(savedTheme);
   //   }
   // }, [setIsDarkTheme]);
-
+  const buttonThemeClasses = `button-theme ${isDarkTheme ? 'dark-theme' : 'light-theme'}`;
   return (
+    
     <button
-      className={`button-theme ${isDarkTheme ? 'dark-theme' : 'light-theme'}`}
+      className={buttonThemeClasses}
       onClick={toggleTheme}
     >
       {isDarkTheme ? 'Light Background Style' : 'Dark Background Style'}

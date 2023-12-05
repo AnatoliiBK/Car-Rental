@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { CarData } from '../carCard/CarData';
 import { SectionCatalog } from '../sections/SectionCatalog';
+import HomeButton from '../HomeButton';
 
 const SportingCars = () => {
   const [cars, setCars] = useState([]);
@@ -28,6 +29,7 @@ const SportingCars = () => {
   return (
     <SectionCatalog>
       <h1 className='sport'>Sporting Cars</h1>
+      <HomeButton />
       <div className="catalog-page">
       
       {sportingCars.map(car => (

@@ -386,3 +386,28 @@ code {
   cursor: pointer;
   border: none;
 }
+
+.home-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  margin-left: 20px;
+
+  &:hover {
+    box-shadow: 0 1px 10px black;
+  }
+  &:hover::after {
+    content: " To Select A Car Category";
+  }
+}
+
+.home-buttonDark {
+  background-color: #2c3e50;
+  color: #ffffff;
+}
+
+.home-buttonLight {
+  background-color: #3498db;
+  color: #ffffff;
+}
