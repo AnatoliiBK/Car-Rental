@@ -394,9 +394,9 @@ code {
   border: none;
   margin-left: 20px;
 
-  &:hover {
+  /* &:hover {
     box-shadow: 0 1px 10px black;
-  }
+  } */
   &:hover::after {
     content: " To Select A Car Category";
   }
@@ -412,7 +412,8 @@ code {
 }
 
 .home-buttonLight {
-  background-color: rgb(234, 234, 234);
+  /* background-color: rgb(234, 234, 234); */
+  background-color: rgb(238, 228, 247);
   color: black;
 
   &:hover {
