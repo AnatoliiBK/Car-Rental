@@ -5,9 +5,9 @@ import { CarData } from '../carCard/CarData';
 import { SectionCatalog } from '../sections/SectionCatalog';
 import HomeButton from '../HomeButton';
 
-const CatalogPage = () => {
+const CatalogPage = ({ isDarkTheme }) => {
   const [cars, setCars] = useState([]);
-
+  
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -27,12 +27,13 @@ const CatalogPage = () => {
   return (
     <SectionCatalog>
       <h1 className='all'>All Cars</h1>
-      <HomeButton />
+      <HomeButton isDarkTheme={isDarkTheme} />
       <div className="catalog-page">
       {cars.map((car, index) => (
         <CarData key={`${car.id}-${index}`} car={car} />
       ))}
     </div>
+    <HomeButton isDarkTheme={isDarkTheme} />
     </SectionCatalog>
   );
 };

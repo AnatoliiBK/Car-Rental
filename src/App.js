@@ -35,10 +35,42 @@ export const App = () => {
               />
             }
           />
-          <Route path="/catalog" element={<CatalogPage />} />
-          <Route path="/sporting" element={<SportingCars />} />
-          <Route path="/suv" element={<SuvCars />} />
-          <Route path="/all road" element={<AllRoadCars />} />
+          <Route
+            path="/catalog"
+            element={
+              <CatalogPage
+                setIsDarkTheme={setIsDarkTheme}
+                isDarkTheme={isDarkTheme}
+              />
+            }
+          />
+          <Route
+            path="/sporting"
+            element={
+              <SportingCars
+                setIsDarkTheme={setIsDarkTheme}
+                isDarkTheme={isDarkTheme}
+              />
+            }
+          />
+          <Route
+            path="/suv"
+            element={
+              <SuvCars
+                setIsDarkTheme={setIsDarkTheme}
+                isDarkTheme={isDarkTheme}
+              />
+            }
+          />
+          <Route
+            path="/all road"
+            element={
+              <AllRoadCars
+                setIsDarkTheme={setIsDarkTheme}
+                isDarkTheme={isDarkTheme}
+              />
+            }
+          />
         </Routes>
       </Router>
     </div>

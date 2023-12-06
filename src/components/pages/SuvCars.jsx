@@ -4,7 +4,7 @@ import { CarData } from '../carCard/CarData';
 import { SectionCatalog } from '../sections/SectionCatalog';
 import HomeButton from '../HomeButton';
 
-const SuvCars = () => {
+const SuvCars = ({ isDarkTheme }) => {
   const [cars, setCars] = useState([]);
 
   useEffect(() => {
@@ -29,13 +29,14 @@ const SuvCars = () => {
   return (
     <SectionCatalog>
       <h1 className='suv'>SUV Cars</h1>
-      <HomeButton />
+      <HomeButton isDarkTheme={isDarkTheme} />
       <div className="catalog-page">
       
       {suvCars.map(car => (
         <CarData key={car.id} car={car} />
       ))}
       </div>
+      <HomeButton isDarkTheme={isDarkTheme} />
     </SectionCatalog>
   );
 };
