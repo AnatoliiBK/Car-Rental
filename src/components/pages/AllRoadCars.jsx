@@ -3,10 +3,12 @@ import axios from 'axios';
 import { CarData } from '../carCard/CarData';
 import { SectionCatalog } from '../sections/SectionCatalog';
 import HomeButton from '../HomeButton';
+import LoadMoreButton from '../LoadMoreButton';
 
 const AllRoadCars = ({ isDarkTheme }) => {
   const [cars, setCars] = useState([]);
-
+  const [visibleCars, setVisibleCars] = useState(8);
+  
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -23,8 +25,11 @@ const AllRoadCars = ({ isDarkTheme }) => {
     fetchData();
   }, []);
 
-  
   const allRoadCars = cars.filter(car => car.type.includes('ALL ROAD'));
+  
+  const loadMore = () => {
+    setVisibleCars(prevVisibleCars => prevVisibleCars + 8); // Збільшити кількість відображених автомобілів на 8
+  };
 
   return (
     <SectionCatalog>
@@ -32,10 +37,13 @@ const AllRoadCars = ({ isDarkTheme }) => {
       <HomeButton isDarkTheme={isDarkTheme} />
       <div className="catalog-page">
       
-      {allRoadCars.map(car => (
+      {allRoadCars.slice(0, visibleCars).map(car => (
         <CarData key={car.id} car={car} />
       ))}
       </div>
+      {visibleCars < allRoadCars.length && (
+        <LoadMoreButton onClick={loadMore} isDarkTheme={isDarkTheme} />
+      )}
       <HomeButton isDarkTheme={isDarkTheme} />
     </SectionCatalog>
   );
