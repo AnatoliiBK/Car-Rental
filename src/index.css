@@ -102,7 +102,7 @@ background: linear-gradient(to right, #FFA500 0%, #FFFF 50%, #FFA500 100%);
   padding-left: 40px;
   padding-right: 300px;
   background: rgba(0, 0, 0, 0);
-  color: white;
+  /* color: white; */
   border: none;
   border-radius: 4px;
   font-size: 30px;
@@ -158,10 +158,12 @@ background: linear-gradient(to right, #FFA500 0%, #FFFF 50%, #FFA500 100%);
 }
 
 .buttonDark {
+  color: white;
   animation: colorChangeDark 2s linear infinite;
 }
 
 .buttonLight {
+  color: white;
   animation: colorChangeLight 2s linear infinite;
 }
 
