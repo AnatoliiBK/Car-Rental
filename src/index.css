@@ -37,9 +37,9 @@ code {
 }
 
 .heroTitle {
-  background: linear-gradient(to right, #FFA500 0%, #FFFF 50%, #FFA500 100%);
+  /* background: linear-gradient(to right, #FFA500 0%, #FFFF 50%, #FFA500 100%);
   background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: transparent; */
   font-size: 30px;
   margin-top: 0;
   margin-right: 0;
@@ -53,6 +53,18 @@ code {
 
 .heroTitle:hover {
   margin-bottom: 0;
+}
+
+.heroTitleDark {
+background: linear-gradient(to right, #FFA500 0%, #FFFF 50%, #FFA500 100%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.heroTitleLight {
+  background: linear-gradient(to right, blue 0%, #FFA500 50%, blue 100%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .label {
@@ -96,7 +108,7 @@ code {
   font-size: 30px;
   font-weight: 600;
   cursor: pointer;
-  animation: colorChange 2s linear infinite;
+  /* animation: colorChange 2s linear infinite; */
   /* animation: colorChange 2s linear infinite; */
   /* transition: color 2s; */
   /* border-bottom: 1px solid gold; */
@@ -120,7 +132,13 @@ code {
   from { border-bottom-color: transparent; } to { border-bottom-color: gold; }
 } */
 
-@keyframes colorChange {
+@keyframes colorChangeLight {
+  50% {
+    color: blue;
+  }
+}
+
+@keyframes colorChangeDark {
   50% {
     color: gold;
   }
@@ -131,12 +149,28 @@ code {
   padding-right: 40px;
   padding-left: 40px;
   border-radius: 4px;
-  animation: colorChange 1s linear infinite;
+  /* animation: colorChange 1s linear infinite; */
 
 }
 
 .button:hover:after {
   content: " Here, Take It For Yourself !";
+}
+
+.buttonDark {
+  animation: colorChangeDark 2s linear infinite;
+}
+
+.buttonLight {
+  animation: colorChangeLight 2s linear infinite;
+}
+
+.buttonDark:hover {
+  animation: colorChangeDark 1s linear infinite;
+}
+
+.buttonLight:hover {
+  animation: colorChangeLight 1s linear infinite;
 }
 
 .car-card {

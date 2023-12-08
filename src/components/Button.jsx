@@ -1,7 +1,8 @@
 import React from "react";
 
-export const Button = ({text}) => {
+export const Button = ({text, isDarkTheme}) => {
+    const buttonClasses = `button ${isDarkTheme ? 'buttonDark' : 'buttonLight'}`;
     return (
-        <button className="button">{text}</button>
+        <button className={buttonClasses}>{text}</button>
     )
 }
