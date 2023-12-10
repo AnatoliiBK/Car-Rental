@@ -1,15 +1,28 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { ButtonModal } from '../ButtonModal';
+import FavoriteButton from '../FavoriteButton';
 
 export const CarData = ({ car }) => {
     const companyAddress = car.address.split(',');
     const city = companyAddress[1];
     const country = companyAddress[2];
+    const [favorites, setFavorites] = useState([]);
+
+  const addToFavorites = () => {
+    setFavorites([...favorites, car]);
+  };
+
+  const removeFromFavorites = (carId) => {
+    setFavorites(favorites.filter((car) => car.id !== carId));
+  };
     return (
     <div className="car-card">
+      <div className="car-img-container">
+      <FavoriteButton onToggle={favorites.some((c) => c.id === car.id) ? removeFromFavorites : addToFavorites} />
       <ButtonModal carId={car.id}>
         <img className="car-img" src={car.img} alt={`${car.make} ${car.model}`} />
       </ButtonModal>
+      </div>
       <h2>{`${car.make} ${car.model}`}</h2>
       
       <div className='descr'>

@@ -56,7 +56,8 @@ code {
 }
 
 .heroTitleDark {
-background: linear-gradient(to right, #FFA500 0%, #FFFF 50%, #FFA500 100%);
+/* background: linear-gradient(to right, #FFA500 0%, #FFFF 50%, #FFA500 100%); */
+background: linear-gradient(to right, #FFA500 0%, blue 50%, #FFA500 100%);
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -180,6 +181,12 @@ background: linear-gradient(to right, #FFA500 0%, #FFFF 50%, #FFA500 100%);
   position: relative;
   overflow: hidden;
   /* height: 354px; */
+}
+
+.car-img-container {
+  
+  width: 100%;
+  z-index: 9997;
 }
 
 .car-img {
@@ -492,4 +499,37 @@ background: linear-gradient(to right, #FFA500 0%, #FFFF 50%, #FFA500 100%);
     /* color: #ffffff; */
     box-shadow: 0 1px 10px blue;
   }
+}
+
+.favorite-button {
+  background-color: transparent;
+  border: none; 
+  cursor: pointer;
+  padding: 0;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 9998;
+}
+
+.favorite-icon {
+  
+  width: 20px;
+  height: 20px;
+
+  &:hover {
+    transform: scale(1.25);
+  }
+}
+
+.active {
+  filter: invert(19%) sepia(94%) saturate(7458%) hue-rotate(359deg) brightness(100%) contrast(119%);
+  
+
+}
+
+.notactive {
+ 
+  filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(360deg) brightness(105%) contrast(105%);
+  
 }
