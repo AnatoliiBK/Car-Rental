@@ -24,6 +24,9 @@ const HomePage = ({ isDarkTheme }) => {
                 <NavLink to='/all road'>
                     <Button text='All Road Cars' isDarkTheme={isDarkTheme} />
                 </NavLink>
+                <NavLink to='/favorites'>
+                    <Button text='Favorites Cars' isDarkTheme={isDarkTheme} />
+                </NavLink>
             </Section>
         </div>
         

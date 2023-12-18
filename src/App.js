@@ -6,6 +6,8 @@ import SportingCars from "./components/pages/SportingCars";
 import SuvCars from "./components/pages/SuvCars";
 import AllRoadCars from "./components/pages/AllRoadCars";
 import ButtonTheme from "./components/ButtonTheme";
+import FavoritePage from "./components/pages/FavoritesPage";
+import FavoritePageButton from "./components/FavoritePageButton";
 
 export const App = () => {
   // Початкове значення теми
@@ -25,6 +27,10 @@ export const App = () => {
     <div className={`${isDarkTheme ? "page-dark-theme" : "page-light-theme"}`}>
       <ButtonTheme setIsDarkTheme={setIsDarkTheme} isDarkTheme={isDarkTheme} />
       <Router>
+        <FavoritePageButton
+          setIsDarkTheme={setIsDarkTheme}
+          isDarkTheme={isDarkTheme}
+        />
         <Routes>
           <Route
             path="/"
@@ -66,6 +72,15 @@ export const App = () => {
             path="/all road"
             element={
               <AllRoadCars
+                setIsDarkTheme={setIsDarkTheme}
+                isDarkTheme={isDarkTheme}
+              />
+            }
+          />
+          <Route
+            path="/favorites"
+            element={
+              <FavoritePage
                 setIsDarkTheme={setIsDarkTheme}
                 isDarkTheme={isDarkTheme}
               />
