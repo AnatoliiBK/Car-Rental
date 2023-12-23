@@ -24,7 +24,7 @@ export const CarData = ({ car }) => {
       </ButtonModal>
       </div>
       <h2>{`${car.make} ${car.model}`}</h2>
-      
+      {/* descr встановлено на display none */}
       <div className='descr'>
         <p>Rental Price: {car.rentalPrice}</p>
         <p>Rental Company: {car.rentalCompany}</p>

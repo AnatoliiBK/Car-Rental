@@ -12,7 +12,7 @@ const FavoriteButton = ({ onToggle, car }) => {
     try {
       if (isFavorite) {
         
-        await axios.delete(`https://652ed5ac0b8d8ddac0b1f589.mockapi.io/${car.id}`);
+        await axios.delete(`https://652ed5ac0b8d8ddac0b1f589.mockapi.io/favorites/${car.id}`);
       } else {
         
         await axios.post('https://652ed5ac0b8d8ddac0b1f589.mockapi.io/favorites', car);
