@@ -18,7 +18,7 @@ export const CarData = ({ car }) => {
     return (
     <div className="car-card">
       <div className="car-img-container">
-      <FavoriteButton onToggle={favorites.some((c) => c.id === car.id) ? removeFromFavorites : addToFavorites} />
+      <FavoriteButton onToggle={favorites.some((c) => c.id === car.id) ? removeFromFavorites : addToFavorites} car={car}/>
       <ButtonModal carId={car.id}>
         <img className="car-img" src={car.img} alt={`${car.make} ${car.model}`} />
       </ButtonModal>

@@ -38,8 +38,8 @@ const FavoritePage = ( {isDarkTheme }) => {
       <h1 className='all'>Favorites</h1>
       <HomeButton isDarkTheme={isDarkTheme} />
       <div className="catalog-page">
-        {favoriteCars.slice(0, visibleCars).map((car, index) => (
-          <CarData key={`${car.id}-${index}`} car={car} />
+        {favoriteCars.slice(0, visibleCars).map((car) => (
+          <CarData key={car.id} car={car} />
         ))}
       </div>
       {visibleCars < favoriteCars.length && (
