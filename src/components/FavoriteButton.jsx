@@ -28,19 +28,22 @@ const FavoriteButton = ({ onToggle, car }) => {
 
     
     try {
-      if (isFavorite) {
-        
-        await axios.delete(`https://652ed5ac0b8d8ddac0b1f589.mockapi.io/favorites/${car.id}`);
-        // видаляємо об'єкт car з локального стану
-        setFavorites(favorites.filter(fav => fav.id !== car.id));
-      } else {
-        
+      if (!isFavorite) {
+        // Перевіряємо, чи об'єкт car вже є у списку favorites
+        const found = favorites.find(fav => fav.id === car.id);
+      
+      if (!found) {
         await axios.post('https://652ed5ac0b8d8ddac0b1f589.mockapi.io/favorites', car);
-        console.log('IDENTYFITY', car.id)
-        // додаємо об'єкт car до локального стану
+        console.log('IDENTYFITY', car.id, 'CAR', car);
+        // Додаємо об'єкт car до локального стану тільки якщо його немає вже в списку
         setFavorites([...favorites, car]);
       }
-
+    } else {
+      await axios.delete(`https://652ed5ac0b8d8ddac0b1f589.mockapi.io/favorites/${car.id}`);
+      console.log('IDENTYFITY DELETE', car.id);
+      // Видаляємо об'єкт car з локального стану
+      setFavorites(favorites.filter(fav => fav.id !== car.id));
+    }
       
       onToggle();
     } catch (error) {
