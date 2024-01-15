@@ -45,7 +45,9 @@ const SuvCars = ({ isDarkTheme }) => {
       {visibleCars < suvCars.length && (
         <LoadMoreButton onClick={loadMore} isDarkTheme={isDarkTheme} />
       )}
-      <HomeButton isDarkTheme={isDarkTheme} />
+      {suvCars.length >= 1 && (
+        <HomeButton isDarkTheme={isDarkTheme} />
+      )}
     </SectionCatalog>
   );
 };

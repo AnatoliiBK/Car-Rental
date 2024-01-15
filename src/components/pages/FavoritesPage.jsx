@@ -38,7 +38,8 @@ const FavoritePage = ( {isDarkTheme }) => {
   return (
     
     <SectionCatalog>
-      <h1 className='all'>Favorites</h1>
+      {/* <h1 className='all'>Favorites</h1> */}
+      <h1 className='all'>{favoriteCars.length > 0 ? "Favorites" : "No Favorites Yet"}</h1>
       <HomeButton isDarkTheme={isDarkTheme} />
       <div className="catalog-page">
         {favoriteCars.slice(0, visibleCars).map((car) => (
@@ -48,7 +49,10 @@ const FavoritePage = ( {isDarkTheme }) => {
       {visibleCars < favoriteCars.length && (
         <LoadMoreButton onClick={loadMore} isDarkTheme={isDarkTheme} />
       )}
-      <HomeButton isDarkTheme={isDarkTheme} />
+      {favoriteCars.length >= 1 && (
+        <HomeButton isDarkTheme={isDarkTheme} />
+      )}
+      {/* <HomeButton isDarkTheme={isDarkTheme} /> */}
     </SectionCatalog>
   );
 };

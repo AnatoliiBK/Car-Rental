@@ -48,7 +48,9 @@ const CatalogPage = ({ isDarkTheme }) => {
       {visibleCars < cars.length && (
         <LoadMoreButton onClick={loadMore} isDarkTheme={isDarkTheme} />
       )}
-      <HomeButton isDarkTheme={isDarkTheme} />
+      {cars.length >= 1 && (
+        <HomeButton isDarkTheme={isDarkTheme} />
+      )}
     </SectionCatalog>
   );
 };
