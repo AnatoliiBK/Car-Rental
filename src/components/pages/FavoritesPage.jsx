@@ -27,12 +27,8 @@ const FavoritePage = ( {isDarkTheme }) => {
     setVisibleCars(prevVisibleCars => prevVisibleCars + 8);
   };
 
-  const handleToggleFavorite = (carId) => {
+  const onToggleFavorite = (carId) => {
     // Оновлюємо стан favoriteCars після видалення або додавання об'єкта у обрані
-    // setFavoriteCars((prevFavoriteCars) => {
-    //   return prevFavoriteCars.filter((car) => car.id !== carId);
-    // });
-    
     setFavoriteCars(prevFavoriteCars => 
       prevFavoriteCars.filter(car => car.id !== carId)
     );
@@ -46,7 +42,7 @@ const FavoritePage = ( {isDarkTheme }) => {
       <HomeButton isDarkTheme={isDarkTheme} />
       <div className="catalog-page">
         {favoriteCars.slice(0, visibleCars).map((car) => (
-          <CarData key={car.id} car={car} onToggleFavorite={handleToggleFavorite} />
+          <CarData key={car.id} car={car} onToggleFavorite={onToggleFavorite} />
         ))}
       </div>
       {visibleCars < favoriteCars.length && (
